@@ -1,0 +1,15 @@
+1. Which of the following are disadvantages of using inheritance to provide Duck behavior?
+    A. Code is duplicated across subclasses
+        - duplication emerges as overrides spread
+    B. Runtime behavior changes are difficult
+        - behavior is fixed at compile time
+    D. It's hard to gain knowledge of all duck behaviors
+        - behavior knowledge becomes fragmented
+    F. Changes can unintentionally affect other ducks
+        - changes ripple unintentionally
+
+2. Lots of things can drive change. List some reasons you've had to change code in your applications.
+    - Unforeseen requirements emerged during the development process (both functional and nonfunctional)
+    - My initial implementations didn't emphasize low coupling and high cohesion and therefore needed refactoring
+    - 3rd party libraries changed resulting in changes in my code
+    - My professor decided that the original implementation didn't match what he had envisioned for the product

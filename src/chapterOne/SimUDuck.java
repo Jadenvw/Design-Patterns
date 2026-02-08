@@ -1,0 +1,50 @@
+/*
+Design principle: Identify the aspects of your application that very and separate them from
+what stays the same. (Encapsulate parts that vary -> fewer unintended consequences and more flexible systems)
+*/
+
+package chapterOne;
+
+import chapterOne.ducks.Duck;
+import chapterOne.ducks.MallardDuck;
+import chapterOne.ducks.RedheadDuck;
+import chapterOne.ducks.RubberDuck;
+
+public class SimUDuck {
+    public static void main(String[] args) {
+        // Duck duck = new Duck();
+        // cannot create an abstract object
+
+        Duck mallard = new MallardDuck();
+        // inherited "as-is" from Duck
+        mallard.quack();
+        mallard.swim();
+        // inherits fly from Duck
+        mallard.fly();
+        // Abstract method display behavior implemented by MallardDuck
+        mallard.display();
+
+        System.out.println();
+
+        Duck redhead = new RedheadDuck();
+        // inherited "as-is" from Duck
+        redhead.quack();
+        redhead.swim();
+        redhead.fly();
+        // Abstract method display behavior implemented by RedheadDuck
+        redhead.display();
+
+        System.out.println();
+
+        // Core OO principle: A subclass should be substitutable for its superclass w/o changing expected behavior
+        Duck rubber = new RubberDuck();
+        // RubberDuck class was forced to override assumed behavior
+        rubber.quack();
+        // inherited "as-is" from Duck
+        rubber.swim();
+        // override inheritance to do nothing
+        rubber.fly();
+        // Abstract method display behavior implemented by RubberDuck
+        rubber.display();
+    }
+}

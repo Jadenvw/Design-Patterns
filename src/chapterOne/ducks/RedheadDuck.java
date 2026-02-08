@@ -1,6 +1,6 @@
-package ducks;
+package chapterOne.ducks;
 
-public class RedheadDuck extends Duck{
+public class RedheadDuck extends Duck {
 
     @Override
     public void display() {
