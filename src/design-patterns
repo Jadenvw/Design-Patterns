@@ -1,0 +1,12 @@
+Chapter One:
+
+The Strategy Pattern: defines a family of algorithms, encapsulates each one, and makes them interchangeable.
+Strategy lets the algorithm vary independently from clients that use it.
+
+- In the SimUDuck example, we defined a family of algorithms related to duck behaviors. These algorithms included
+  different ways a duck could fly and quack. In order to encapsulate them, we defined two interfaces called FlyBehavior
+  and QuackBehavior in which the abstract Duck class has a "HAS-A" relationship with. We used composition instead of
+  inheritance to make the system more flexible to change. We also defined a subcategory of algorithms that implement
+  both behaviors. Once we include the inherited setter methods in the Duck class, all subclasses of Duck could
+  dynamically change their behaviors at runtime.
+

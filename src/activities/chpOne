@@ -13,3 +13,10 @@
     - My initial implementations didn't emphasize low coupling and high cohesion and therefore needed refactoring
     - 3rd party libraries changed resulting in changes in my code
     - My professor decided that the original implementation didn't match what he had envisioned for the product
+
+3.
+a. Using our new design, what would you do if you needed to add rocket-powered flying to the SimUDuck app?
+    - I would create a class called FlyRocketPowered that implements the FlyBehavior interface.
+b. Can you think of a class that might want to use the Quack behavior that isn't a duck?
+    - A duck call device used when hunting.
+    - We can also use the fly behavior for a variety of birds and vehicles.

@@ -1,0 +1,7 @@
+Chapter One:
+
+Design principle: Identify the aspects of your application that very and separate them from
+what stays the same. (Encapsulate parts that vary -> fewer unintended consequences and more flexible systems)
+
+Design principle: Favor composition over inheritance.
+Creating systems using composition gives you more flexibility and lets you change behavior at runtime

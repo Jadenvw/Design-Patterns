@@ -1,16 +1,35 @@
 /*
 Design principle: Identify the aspects of your application that very and separate them from
 what stays the same. (Encapsulate parts that vary -> fewer unintended consequences and more flexible systems)
+
+Design principle: Favor composition over inheritance.
+- Creating systems using composition gives you more flexibility and lets you change behavior at runtime
 */
 
 package chapterOne;
 
-import chapterOne.ducks.Duck;
-import chapterOne.ducks.MallardDuck;
-import chapterOne.ducks.RedheadDuck;
-import chapterOne.ducks.RubberDuck;
+import chapterOne.ducks.*;
+import chapterOne.ducks.behavior.FlyRocketPowered;
 
-public class SimUDuck {
+public class MiniDuckSimulator {
+    public static void main(String[] args) {
+        Duck mallard = new MallardDuck();
+        // calls MallardDuck's inherited behavior related methods delegated by each behavior object
+        mallard.performQuack();
+        mallard.performFly();
+
+        System.out.println();
+
+        Duck model = new ModelDuck();
+        model.performFly(); // delegates behavior to instance set in constructor
+        model.setFlyBehavior(new FlyRocketPowered()); // invokes inherited behavior
+        model.performFly(); // dynamically changes behavior to rocket powered
+    }
+}
+
+
+/*
+public class MiniDuckSimulator {
     public static void main(String[] args) {
         // Duck duck = new Duck();
         // cannot create an abstract object
@@ -48,3 +67,4 @@ public class SimUDuck {
         rubber.display();
     }
 }
+*/
