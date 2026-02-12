@@ -23,7 +23,9 @@ public class MiniDuckSimulator {
         Duck model = new ModelDuck();
         model.performFly(); // delegates behavior to instance set in constructor
         model.setFlyBehavior(new FlyRocketPowered()); // invokes inherited behavior
-        model.performFly(); // dynamically changes behavior to rocket powered
+        model.performFly();// dynamically changes behavior to rocket powered
+
+        // ----------- Ad
     }
 }
 

@@ -1,3 +1,11 @@
+Design patterns give you a shared vocab with other developers and allows you to think at the pattern level rather
+then the object level.
+Communicating with patterns allows you to:
+    - communicate sets of qualities, characteristics, and constraints all at the same time
+    - say more with less
+    - stay in design longer w/o diving into implementation
+    - work quicker with less misunderstanding
+
 Chapter One:
 
 The Strategy Pattern: defines a family of algorithms, encapsulates each one, and makes them interchangeable.

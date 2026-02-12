@@ -5,3 +5,11 @@ what stays the same. (Encapsulate parts that vary -> fewer unintended consequenc
 
 Design principle: Favor composition over inheritance.
 Creating systems using composition gives you more flexibility and lets you change behavior at runtime
+
+Design principle: Program to interfaces, not implementations
+Instead of programming duck flying behavior directly to the Duck class, programming it to an interface to make
+code more flexible and loosely coupled.
+When you program to implementations: you bind your code to specific details; you make change hard; you reduce
+flexibility; you hurt testability
+When you program to an interface: you depend only on behavior; you can swap implementations; you improve testability;
+reduce effects of change
