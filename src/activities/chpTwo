@@ -1,0 +1,15 @@
+1. Based on our first implementation, which of the following apply?
+    A. We are coding to concrete implementations, not interfaces.
+        - WeatherData depends on the concrete display classes. If those classes change, WeatherData might break
+        - Violates Principle: Program to an interface, not an implementation.
+    B. For every new display element, we need to alter code.
+        - The subject (WeatherData) must be modified every time a new display is added. Adding a new display
+          requires modifying existing, stable code (WeatherData), instead of extending behavior through polymorphism.
+        - Violates Principle: Open for extension, closed for modification (Open/Closed Principle)
+    C. We have no way to add display elements at runtime.
+        - Displays are wired in as explicit calls of concrete implementations so we can't
+          dynamically subscribe/unsubscribe at runtime.
+        - Violates Principle: Favor loose coupling between objects that interact.
+    E. We haven't encapsulated what changes.
+        - The number and type of displays change and that variability is baked into WeatherData
+        - Violates Principle: Identify what varies and encapsulate it from what stays the same.
