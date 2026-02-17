@@ -18,3 +18,13 @@ Strategy lets the algorithm vary independently from clients that use it.
   both behaviors. Once we include the inherited setter methods in the Duck class, all subclasses of Duck could
   dynamically change their behaviors at runtime.
 
+Chapter Two:
+
+The Observer Pattern: defines a one-to-many dependency between objects so that when one object (subject) changes state,
+all of its dependents (observers) are notified and updated automatically.
+- There are numerous ways this pattern helps achieve loose coupling between objects:
+    1) The only thing the subject knows about an observer is that it implements a certain interface (Observer interface)
+    2) We can add new observers at any time (the subject only depends on a list of Observer implementations)
+    3) We never need to modify the subject to add new types of observers (open/closed principle)
+    4) We can reuse subjects and observers independently of each other
+    5) Changes to the subject or the observer will not affect the other
