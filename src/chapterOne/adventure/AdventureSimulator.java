@@ -7,10 +7,8 @@ Queen, King, Knight, Troll all extend Character and each "HAS-A" specific fighti
 Knife, Sword, BowAndArrow, Axe all implement the WeaponBehavior interface (concrete classes)
 */
 
-package chapterOne;
+package chapterOne.adventure;
 
-import chapterOne.adventure.*;
-import chapterOne.adventure.Character;
 import chapterOne.adventure.behavior.*;
 
 public class AdventureSimulator {

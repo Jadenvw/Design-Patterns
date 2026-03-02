@@ -6,9 +6,8 @@ Design principle: Favor composition over inheritance.
 - Creating systems using composition gives you more flexibility and lets you change behavior at runtime
 */
 
-package chapterOne;
+package chapterOne.ducks;
 
-import chapterOne.ducks.*;
 import chapterOne.ducks.behavior.FlyRocketPowered;
 
 public class MiniDuckSimulator {
