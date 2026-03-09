@@ -13,7 +13,8 @@ public class StatisticsDisplay implements Observer, Display {
     }
 
     @Override
-    public void update(float temperature, float humidity, float pressure) {
+    public void update() {
+        float temperature = (float) weatherData.getTemp();
         tempSum += temperature;
         numReadings++;
 

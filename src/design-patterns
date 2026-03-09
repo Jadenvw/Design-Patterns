@@ -28,3 +28,9 @@ all of its dependents (observers) are notified and updated automatically.
     3) We never need to modify the subject to add new types of observers (open/closed principle)
     4) We can reuse subjects and observers independently of each other
     5) Changes to the subject or the observer will not affect the other
+
+- In the WeatherStation application, we implemented the Observer pattern by defining contracts for subjects and
+  observers and implementing concrete classes with those interfaces. The goal was to abstract weather data state changes
+  away from the concrete observers to support a loosely coupled system. Whenever weatherData state changed, the
+  observers were notified with the update method. We later improved this implementation by using getters in concrete
+  update implementations to shift from pushing to pulling. This allows observers to only get the state that they need.

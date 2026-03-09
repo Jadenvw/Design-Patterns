@@ -13,3 +13,18 @@
     E. We haven't encapsulated what changes.
         - The number and type of displays change and that variability is baked into WeatherData
         - Violates Principle: Identify what varies and encapsulate it from what stays the same.
+
+2. For each design principle, describe how the Observer Pattern makes use of the principle.
+    A. Identify the aspects of your application that vary and separate them from what stays the same.
+        - This principle is applied by separating the subject from its observers. We knew that each display was going to
+          change depending on type, and the number of displays could be increased or decreased in the future. Instead of
+          having the WeatherData object update each display whenever a state change occurs, the subject updates all
+          registered observers at once. The subject no longer cares who is an observer and adding or removing observers
+          no longer changes the subject.
+    B. Program to an interface, not an implementation.
+        - This principle is applied by coding the WeatherData object to the Subject interface and the displays to the
+          Observer and Display interfaces. By programming our displays to the Observer interface, it become much easier
+          to update and more loosely coupled from the subject.
+    C. Favor composition over inheritance.
+        - Instead of the observers inherited state from the subject, they form a "HAS-A" relationship with the subject.
+          Now the subject has an array composed of many different observers.
